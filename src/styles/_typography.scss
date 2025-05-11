@@ -1,0 +1,44 @@
+@use './variables' as *;
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+:root {
+    --font-body: 'VT323';
+    --font-heading: 'Press Start 2P';
+    --font-subtitle: 'VT323';
+}
+
+body {
+    font-family: var(--font-body), sans-serif;
+    margin: 0;
+    background-color: var(--bg-color, #fafafa);
+    color: var(--text-color, #1e1e1e);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), monospace;
+    font-weight: normal;
+}
+small, label {
+    font-family: var(--font-subtitle), monospace;
+}
+
+@each $name, $size in $font-sizes {
+    .text-#{$name} {
+        font-size: $size;
+    }
+}
+
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }

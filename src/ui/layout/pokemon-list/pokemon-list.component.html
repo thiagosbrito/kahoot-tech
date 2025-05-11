@@ -1,0 +1,31 @@
+<section class="pokemon-list p-8 my-10">
+    @if (isLoading()) {
+        <app-loader />
+    }
+
+    <div class="sorting">
+        <span>Sort: </span>
+        <a href="#" [ngClass]="{'active': sortDirection() === 'asc'}" (click)="$event.preventDefault(); sortDirection.set('asc')">Ascending</a>
+        <span>|</span>
+        <a href="#" [ngClass]="{'active': sortDirection() === 'desc'}" (click)="$event.preventDefault(); sortDirection.set('desc')">Descending</a>
+    </div>
+
+    <div class="list-grid">
+        @defer(when pokemons()) {
+            @for(pokemon of sortedList(); track pokemon.name) {
+                <div class="pokemon-item">
+                    <app-pokemon-card
+                        [pokemon]="pokemon"
+                        (cardClick)="onPokemonClick($event)" />
+                </div>
+            }
+        }
+    </div>
+
+    <div class="flex mt-5">
+        @if (pokemonService.hasMore()) {
+            <app-button class="mx-auto" [label]="'Load more...'" (buttonClicked)="loadMore()"></app-button>
+        }
+    </div>
+
+</section>

@@ -1,0 +1,15 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+
+    .logo {
+        -webkit-text-stroke-width: 5px;
+        -webkit-text-stroke-color: black;
+        paint-order: stroke fill;
+        color: white !important;
+    }
+}

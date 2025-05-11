@@ -1,0 +1,26 @@
+$spacing-unit: 1rem;
+$container-max-width: 1200px;
+$gutter: 1.5rem;
+$color-background: #ffffff;
+$color-primary: #007bff;
+
+$spacing-scale: (
+  0: 0rem,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.25rem,
+  6: 1.5rem,
+  8: 2rem,
+  10: 2.5rem
+);
+
+$font-sizes: (
+  xs: 0.75rem,
+  sm: 0.875rem,
+  base: 1rem,
+  lg: 1.125rem,
+  xl: 1.25rem,
+  2xl: 1.5rem
+);

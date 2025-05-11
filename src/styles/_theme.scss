@@ -1,0 +1,19 @@
+:root {
+    --color-primary: 239, 83, 80;
+    --color-secondary: 255, 202, 40;
+    --color-accent: 66, 165, 245;
+}
+
+.theme-light {
+    --color-background: #fafafa;
+    --color-surface: #ffffff;
+    --color-text: #1e1e1e;
+    --background-image: url('/pokemon-bg.png')
+}
+
+.theme-dark {
+    --color-background: #1e1e1e;
+    --color-surface: #2c2c2c;
+    --color-text: #f0f0f0;
+    --background-image: url('/pokemon-bg-dark.png')
+}

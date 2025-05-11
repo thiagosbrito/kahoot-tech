@@ -1,0 +1,20 @@
+$pokeRed:    #EF5350;
+$pokeYellow: #FFCA28;
+$pokeBlue:   #42A5F5;
+$pokeGreen:  #66BB6A;
+$pokeGray:   #9E9E9E;
+
+$bgLight:    #FAFAFA;
+$bgDark:     #1E1E1E;
+$surface:    #FFFFFF;
+
+$colors: (
+    primary:    $pokeRed,
+    secondary:  $pokeYellow,
+    background: $bgLight,
+    background-dark: $bgDark,
+    surface:    $surface,
+    info:       $pokeBlue,
+    neutral:    $pokeGray,
+    success:    $pokeGreen
+);

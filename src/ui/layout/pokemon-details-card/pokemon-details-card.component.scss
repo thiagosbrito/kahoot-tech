@@ -1,0 +1,138 @@
+.pixel-card {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  border: 4px solid var(--color-text);
+  box-shadow: 0 0 0 6px var(--color-background), 0 0 0 10px var(--color-text);
+  font-family: 'Press Start 2P', monospace;
+  border-radius: 0;
+  overflow: hidden;
+  color: var(--color-text);
+  width: 100%;
+  max-width: 700px;
+  min-height: 400px;
+}
+
+.pixel-card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-background);
+  border-right: 4px solid var(--color-text);
+  padding: 32px 16px;
+}
+
+.pixel-img {
+  image-rendering: pixelated;
+  background: var(--color-background);
+  border: 4px solid var(--color-text);
+  box-shadow: 0 0 0 4px var(--color-background), 0 0 0 8px var(--color-text);
+  border-radius: 0;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+
+.pixel-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 24px;
+  gap: 18px;
+}
+
+.pixel-title {
+  font-size: 2rem;
+  font-family: 'Press Start 2P', monospace;
+  color: var(--color-text);
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.pixel-info {
+  background: var(--color-background);
+  border: 2px solid var(--color-text);
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  font-size: 1rem;
+}
+
+.pixel-info-row {
+  display: flex;
+  gap: 24px;
+}
+
+.pixel-label {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.pixel-value {
+  font-size: 1rem;
+  font-family: 'Press Start 2P', monospace;
+  color: var(--color-text);
+}
+
+.pixel-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.pixel-badge {
+  background: var(--color-background);
+  border: 2px solid var(--color-text);
+  padding: 2px 12px;
+  font-size: 0.8rem;
+  font-family: 'Press Start 2P', monospace;
+  color: var(--color-text);
+  border-radius: 0;
+}
+
+@media (max-width: 700px) {
+  .pixel-card {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+  .pixel-card-img {
+    border-right: none;
+    border-bottom: 4px solid var(--color-text);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .pixel-card, .pixel-card-info {
+    background: var(--color-background);
+    color: var(--color-text);
+  }
+  .pixel-card {
+    box-shadow: 0 0 0 6px #23272f, 0 0 0 10px var(--color-text);
+    border-color: var(--color-text);
+  }
+  .pixel-card-img {
+    background: var(--color-background);
+    border-color: var(--color-text);
+  }
+  .pixel-img {
+    background: var(--color-background);
+    border-color: var(--color-text);
+    box-shadow: 0 0 0 4px var(--color-text), 0 0 0 8px var(--color-background);
+  }
+  .pixel-title, .pixel-label, .pixel-value {
+    color: var(--color-text);
+  }
+  .pixel-info {
+    background: var(--color-background);
+    border-color: var(--color-text);
+  }
+  .pixel-badge {
+    background: var(--color-background);
+    border-color: var(--color-text);
+    color: var(--color-text);
+  }
+}

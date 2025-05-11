@@ -1,0 +1,17 @@
+<label [class]="switchClass()">
+    <input
+        type="checkbox"
+        [checked]="checked()"
+        (change)="onToggle()"
+    />
+    <span
+        class="slider round"
+        [ngStyle]="sliderStyle()"
+    >
+        <span class="icon">
+            @if (icon()) {
+                <app-icon [icon]="icon()!" [size]="24" />
+            }
+        </span>
+    </span>
+  </label>

@@ -1,0 +1,6 @@
+<div class="pokemon-card" (click)="cardClick.emit(pokemon())">
+    <div class="avatar">
+        <img [ngSrc]="pokemonImageUrl()" priority width="72" height="72" alt="{{ pokemon().name }}" />
+    </div>
+    <p class="name"> {{ pokemon().name }}</p>
+</div>

@@ -1,0 +1,13 @@
+<div class="flex flex-col h-screen pokemon-root">
+    <app-header />
+    <div class="pokemon-container">
+        <a routerLink="/home" class="pixel-back-btn">&#8592; Back to list</a>
+        @if (isLoading()) {
+            <app-loader />
+        }
+
+        @defer (when pokemonData()) {
+            <app-pokemon-details-card [pokemon]="pokemonData()" />
+        }
+    </div>
+</div>

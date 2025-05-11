@@ -1,0 +1,46 @@
+<div class="pixel-card">
+    <div class="pixel-card-img">
+      @defer (when pokemon().sprites) {
+        <img
+          [ngSrc]="pokemon().sprites.other['official-artwork'].front_default"
+          [alt]="pokemon().name"
+          width="350"
+          height="350"
+          priority
+        />
+      }
+    </div>
+    <div class="pixel-card-info">
+        <h1 class="pixel-title">{{ pokemon().name }}</h1>
+        <div class="pixel-info">
+            <div class="pixel-label">Types</div>
+            <div class="pixel-badges">
+                @for (type of pokemon().types; track type.type.name) {
+                    <span class="pixel-badge">{{ type.type.name }}</span>
+                }
+            </div>
+        </div>
+        <div class="pixel-info">
+            <div class="pixel-label">Abilities</div>
+            <div class="pixel-badges">
+                @for (ability of pokemon().abilities; track ability.ability.name) {
+                    <span class="pixel-badge">{{ ability.ability.name }}</span>
+                }
+            </div>
+        </div>
+        <div class="pixel-info pixel-info-row">
+            <div>
+                <div class="pixel-label">Height</div>
+                <div class="pixel-value">{{ pokemon().height / 10 }}m</div>
+            </div>
+            <div>
+                <div class="pixel-label">Weight</div>
+                <div class="pixel-value">{{ pokemon().weight / 10 }}kg</div>
+            </div>
+        </div>
+        <div class="pixel-info">
+            <div class="pixel-label">Base Experience</div>
+            <div class="pixel-value">{{ pokemon().base_experience }}</div>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,4 @@
+// TODO: Update to a pixelated design
 .switch {
     position: relative;
     display: inline-block;
@@ -26,9 +27,6 @@
         }
     }
 }
-
-
-
 
 input:checked + .slider:before {
     transform: translateX(var(--thumb-translate));

@@ -44,6 +44,8 @@ The project is structured as follows:
 │   └── main.ts // Entry point for the application
 ```
 
+We are using Zoneless Angular, which means we are not using Angular's change detection mechanism. This allows us to have better performance, control over the rendering process and helps us to avoid unnecessary change detection cycles.
+
 ## Design System
 The design system is located in the `styles` directory. It includes global styles, variables, and mixins that can be used throughout the application. The design system is built using SCSS, and it follows a modular approach to ensure reusability and maintainability.
 
